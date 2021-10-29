@@ -1,0 +1,8 @@
+<span{% if attributes %} class="{{ attributes.class }}"{% endif %}
+  {{- attributes ? attributes|without(class) -}}>
+  {{ title_prefix }}
+  <a href="{{ url }}" class="tag__link">
+    {{ name }}
+  </a>
+  {{ title_suffix }}
+</span>

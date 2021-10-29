@@ -33,34 +33,8 @@
  * @see template_preprocess_field()
  */
 #}
-{%
-  set title_classes = [
-    label_display == 'visually_hidden' ? 'visually-hidden',
-  ]
-%}
-{# If the label is hidden don't add any additional markup. #}
-{% if label_hidden %}
-  {% if multiple %}
-      {% for item in items %}
-        {{ item.content }}
-      {% endfor %}
-  {% else %}
-    {% for item in items %}
-      {{ item.content }}
-    {% endfor %}
-  {% endif %}
-{# If the label is shown add the default Drupal wrapping markup. #}
-{% else %}
-  <div{{ attributes }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% if multiple %}
-      <div>
-    {% endif %}
-    {% for item in items %}
-      <div{{ item.attributes }}>{{ item.content }}</div>
-    {% endfor %}
-    {% if multiple %}
-      </div>
-    {% endif %}
-  </div>
-{% endif %}
+{% embed '@dcnyc_theme/tags/tags.twig' %}
+  {% block tag_item %}
+    {{ item.content }}
+  {% endblock %}
+{% endembed %}

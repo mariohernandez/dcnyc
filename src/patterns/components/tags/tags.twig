@@ -1,0 +1,18 @@
+{{ attach_library('dcnyc_theme/tags') }}
+
+<ul class="tags{{ modifier ? ' ' ~ modifier }}
+  {{- attributes ? ' ' ~ attributes.class -}}"
+  {{- attributes ? attributes|without(class) -}}>
+  {% for item in items %}
+    <li class="tag__item">
+      {% block tag_item %}
+        {%
+          include '@dcnyc_theme/tags/tag-item.twig' with {
+            "name": item.name,
+            "url": item.url
+          } only
+        %}
+      {% endblock %}
+    </li>
+  {% endfor %}
+</ul>

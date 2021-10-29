@@ -29,6 +29,31 @@ global:
 #     - dcnyc_theme/clearfix
 #     - dcnyc_theme/visually-hidden
 
+author:
+  css:
+    component:
+      dist/css/author.css: {}
+
+button:
+  css:
+    component:
+      dist/css/button.css: {}
+
+card:
+  css:
+    component:
+      dist/css/card.css: {}
+
+from-our-blog:
+  css:
+    component:
+      dist/css/from-our-blog.css: {}
+
+hero:
+  css:
+    component:
+      dist/css/hero.css: {}
+
 message:
   css:
     component:
@@ -38,6 +63,11 @@ tabs:
   css:
     component:
       dist/css/tabs.css: {}
+
+tags:
+  css:
+    component:
+      dist/css/tags.css: {}
 
 webfonts:
   css:

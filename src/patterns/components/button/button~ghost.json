@@ -1,0 +1,7 @@
+{
+  "button": {
+    "text": "Boo!",
+    "url": "",
+    "modifier": "button--ghost"
+  }
+}

@@ -1,0 +1,36 @@
+// Import site utilities
+@import '../../global/utils/init';
+
+.tags {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag__item {
+  align-items: center;
+  border-radius: 2px;
+  color: $color-gray-dark;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
+  margin-right: 10px;
+
+
+  a {
+    background-color: $color-black;
+    color: $color-white;
+    display: block;
+    font-size: 1.3rem;
+    line-height: 1.2;
+    padding: 6px 12px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-black, 15%);
+    }
+  }
+}
